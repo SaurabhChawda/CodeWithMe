@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="input" onkeyup="getDataFromApi(event,'saurabh')" />
+      <button onclick="sendEmailToUser()">Send Email</button>
+    </div>
+    <ul id="list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <button>Click</button>
+    </ul>
+    <script>
+      document.getElementById("list").addEventListener("click", (event) => {
+        console.log(event);
+        if (event.target.tagName === "LI") {
+          console.log(`Clicked on ${event.target.textContent}`);
+        }
+      });
+    </script>
+    <script src="./11_Debounce.js"></script>
+    <script src="./12_Throttle.js"></script>
+  </body>
+</html>
